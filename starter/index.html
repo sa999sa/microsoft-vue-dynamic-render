@@ -18,7 +18,26 @@
         <hr />
 
         <!-- TODO: Add booking form -->
-
+        <form v-show="!booking.completed">
+            <h2>Book now!</h2>
+            <div class="row">
+                <label for="product-cabin">Select class:</label>
+                <select id="product-cabin" v-model="booking.cabinIndex">
+                    <option v-for="(cabin, index) in product.cabins" :value="index">
+                        {{ cabin.name }} $ {{ cabin.price.toLocaleString('en-US') }}
+                    </option>
+                </select>
+            </div>
+            <div class="row">
+                <label for="notes">Notes:</label>
+                <textarea v-model="booking.notes" rows="3"></textarea>
+            </div>
+            <div class="row">
+                <!--TODO: Add button later -->
+        
+        
+            </div>
+        </form>
         <!-- TODO: Add success display -->
 
 

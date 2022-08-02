@@ -1,4 +1,4 @@
 import { createApp } from 'vue'
-import App from './App.vue'
-d
-createApp(App).mount('#app')
+import Host from './components/Host.vue'
+
+createApp(Host).mount('#app')
